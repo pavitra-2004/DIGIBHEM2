@@ -1,5 +1,6 @@
 # DIGIBHEM2
 Hotel Booking Registration Form
+
 Overview
 This is a hotel booking registration form that allows users to input their details for booking a hotel room. The form calculates the total cost based on the room type, amenities, extra persons, and advance payment. It also allows for validation, cost calculations, and printing the form.
 
