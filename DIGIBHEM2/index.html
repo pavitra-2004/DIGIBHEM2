@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Registration Form</title>
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.8/dist/sweetalert2.all.min.js"></script>
+    <!-- Boxicons CSS (for social media icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Hotel Booking Registration</h1>
+        <form id="bookingForm">
+            <!-- Customer Info -->
+            <div class="container-div">
+                <div class="legend">Customer Info</div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required placeholder="Enter your name">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="checkin">Check-in Date:</label>
+                        <input type="date" id="checkin" name="checkin" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="days">Total Days:</label>
+                        <input type="number" id="days" name="days" class="form-control" required min="1" placeholder="Number of days">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="persons">Total Persons:</label>
+                        <input type="number" id="persons" name="persons" class="form-control" min="1" value="1">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="advance">Advance Payment (₹):</label>
+                        <input type="number" id="advance" name="advance" class="form-control" required min="0" placeholder="Enter advance payment">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Room Info -->
+            <div class="container-div">
+                <div class="legend">Room Info</div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="roomType">Room Type:</label>
+                        <select id="roomType" name="roomType" class="form-control" required>
+                            <option value="Delux">Delux</option>
+                            <option value="Suite">Suite</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="amenities">Amenities:</label>
+                        <div class="checkbox-group">
+                            <div>
+                                <input type="checkbox" id="ac" name="amenities" value="AC"> <label for="ac">AC</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="locker" name="amenities" value="Locker"> <label for="locker">Locker</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cost Calculation -->
+            <div class="container-div cost-details">
+                <div class="legend">Cost Details</div>
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <p>Delux Room: ₹3000/day, Suite Room: ₹5000/day</p>
+                        <p>AC: ₹500/day, Locker: ₹200/day</p>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Total Room Cost (₹):</label>
+                        <input type="text" id="roomCost" class="form-control" readonly>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Total Amenities Cost (₹):</label>
+                        <input type="text" id="amenitiesCost" class="form-control" readonly>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Extra Person Charges (₹):</label>
+                        <input type="text" id="extraCost" class="form-control" readonly>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Total Cost (₹):</label>
+                        <input type="text" id="totalCost" class="form-control" readonly>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label>Balance (₹):</label>
+                        <input type="text" id="balance" class="form-control" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="row">
+                <div class="col-12 form-group text-center">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="calculateCosts()">
+                        <i class="fas fa-check"></i> Calculate
+                    </button>
+                    <button type="reset" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-undo"></i> Reset
+                    </button>
+                    <button type="button" class="btn btn-info btn-sm" onclick="printForm()">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                </div>
+            </div>
+            <div class="home-sci">
+                <a href="https://twitter.com/home" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.linkedin.com/in/pavitra-g-627600280" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://github.com/pavitra-2004" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Local JS -->
+    <script src="javascript.js"></script>
+</body>
+
+</html>
