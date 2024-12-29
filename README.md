@@ -5,13 +5,21 @@ Overview
 This is a hotel booking registration form that allows users to input their details for booking a hotel room. The form calculates the total cost based on the room type, amenities, extra persons, and advance payment. It also allows for validation, cost calculations, and printing the form.
 
 Features
+
 Customer Information: Name, check-in date, total days, total persons, and advance payment.
+
 Room Information: Room type selection (Delux or Suite) and available amenities (AC and Locker).
+
 Cost Calculation: Calculates the cost based on room type, number of days, amenities, and extra persons.
+
 Validation: Ensures that all required fields are filled and that input values are valid.
+
 Responsive Design: Works well on both desktop and mobile devices.
+
 Social Media Links: Provides links to social media profiles (Twitter, LinkedIn, GitHub).
+
 Print Functionality: Allows users to print the filled form.
+
 Technologies Used
 HTML5
 CSS3 (with Bootstrap and custom styling)
@@ -19,6 +27,7 @@ JavaScript (for form validation, calculations, and event handling)
 Font Awesome (for icons)
 SweetAlert2 (for pop-up alerts)
 Boxicons (for social media icons)
+
 Installation
 Clone or Download:
 Clone this repository or download the files to your local machine.
@@ -39,6 +48,7 @@ Bootstrap (for responsive design and basic styling)
 Font Awesome (for icons)
 SweetAlert2 (for pop-up validation alerts)
 Boxicons (for social media icons)
+
 These dependencies are linked via CDN in the index.html file.
 
 Customization:
